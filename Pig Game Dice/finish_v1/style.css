@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffdede;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+.game-box {
+  display: flex;
+  background-color: #fdaeae;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.p1-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(106, 164, 214);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-top: 50px;
+}
+
+.p2-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(255, 197, 143);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-top: 50px;
+}
+
+.p1-current-score-box {
+  margin-top: 100px;
+  text-align: center;
+  width: 30%;
+  border-radius: 8px;
+  background-color: #c1e4f1;
+}
+
+.p2-current-score-box {
+  margin-top: 100px;
+  text-align: center;
+  width: 30%;
+  border-radius: 8px;
+  background-color: #ffaf7a;
+}
+
+.float-box {
+  background-color: #8d7a7a;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+}
+
+.float-box button {
+  margin-bottom: 50px;
+  border-radius: 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.dice {
+  margin-bottom: 50px;
+  width: 50%;
+  aspect-ratio: 1/1;
+  /* background-image: url("./dice-1.png"); */
+  background-size: contain;
+  background-color: #5e4747;
+}
+
+.dice img {
+  width: 100%;
+  height: 100%;
+}
+
+.score {
+  color: rgb(239, 248, 115);
+  font-size: 30px;
+}
