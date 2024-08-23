@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  background-color: #f8a8a8;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #e0e0e0;
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.center {
+  height: 100%;
+}
+img {
+  height: 100%;
+}
+
+.left,
+.center,
+.right {
+  flex: 1;
+}
+/* header span:first-child {
+  color: gray;
+} */
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+header input {
+  width: 30%;
+}
+
+section {
+  margin: 0 auto;
+
+  width: 60%;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.balance-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-amount {
+  font-size: xx-large;
+}
+
+.grid {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.record {
+  background-color: #fff;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  border-radius: 10px;
+}
+
+.transfer-money {
+  background-color: rgb(255, 202, 103);
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.request-loan {
+  background-color: rgb(119, 224, 105);
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 10px;
+}
+
+.close-account {
+  background-color: rgb(248, 102, 102);
+  grid-column: 2;
+  grid-row: 3;
+  border-radius: 10px;
+}
+
+.transfer-money-grid {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  text-align: center;
+}
+
+.transfer-money-grid input {
+  width: 100%;
+}
+
+.transfer-money-grid input:first-child {
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 5px;
+}
+
+.transfer-money-grid span:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: small;
+}
+
+.transfer-money-grid input:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 5px;
+}
+
+.transfer-money-grid span:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: small;
+}
+
+.transfer-money-grid button {
+  grid-column: 3;
+  grid-row: 1;
+  border-radius: 5px;
+}
