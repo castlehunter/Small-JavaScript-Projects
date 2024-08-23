@@ -16,13 +16,3 @@ body {
   background: linear-gradient(to top left, #28b487, #7dd56f);
   padding: 20px;
 }
-
-.hide {
-  display: none;
-}
-
-.modal {
-  /* height: 100px; */
-  width: 300px;
-  background-color: white;
-}
