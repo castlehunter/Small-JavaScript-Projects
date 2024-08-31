@@ -9,26 +9,36 @@ const btnsOpenModal = document.querySelectorAll(".show-modal");
 // click on three different buttons will open the same content
 // That's why there is only one function for removing "hidden"
 
-const openModal = function () {
+function openModal() {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
-};
+}
 
-const closeModal = function () {
+function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-};
+}
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener("click", openModal);
+btnsOpenModal.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    openModal();
+  });
+});
 
-btnCloseModal.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+btnCloseModal.addEventListener("click", function () {
+  closeModal();
+});
 
-document.addEventListener("keydown", function (e) {
-  // console.log(e.key);
-
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
 });
+
+// document.addEventListener("keydown", function (e) {
+//   // console.log(e.key);
+
+//   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+//     closeModal();
+//   }
+// });
