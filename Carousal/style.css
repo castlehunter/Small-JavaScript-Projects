@@ -11,7 +11,6 @@ body {
   /* align-items: center; */
   margin: 0;
   /* height: 100vh; */
-  overflow: hidden;
 }
 
 main {
@@ -19,45 +18,55 @@ main {
   margin: 0 auto;
 }
 
+.container {
+  position: relative;
+}
 .carousal {
   display: flex;
+
+  width: 100%;
+  height: 20rem;
+  background-color: #fdffe1;
   align-items: center;
+  /* justify-content: center; */
+  margin-bottom: 1rem;
+  /* overflow: hidden; */
 }
 
-.carousal__arrow {
-  position: relative;
-
-  width: 60px;
-  aspect-ratio: 1/1;
-  opacity: 0.5;
-  border-radius: 50%;
-  border: none;
-}
-
-.carousal__arrow--left {
-  z-index: 100;
-  transform: translateX(50%);
-}
-
-.carousal__arrow--right {
-  z-index: 100;
-  transform: translateX(-50%);
+.slide {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(225, 193, 255);
 }
 
 .carousal__pic {
-  width: 300px;
-  height: 300px;
   background-color: aquamarine;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.carousal__pic--1 {
+  background-image: url("pic1.jpg");
+}
+
+.carousal__pic--2 {
+  background-image: url("pic2.jpg");
+}
+
+.carousal__pic--3 {
+  background-image: url("pic3.jpg");
 }
 
 .carousal__paragraph {
-  width: 500px;
-  height: 200px;
-  background-color: bisque;
 }
 
 .page {
+  background-color: rgb(219, 219, 219);
+  border-radius: 0.4rem;
   text-align: center;
 }
 
@@ -65,4 +74,35 @@ main {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.page button:last-child {
+  margin-right: 0;
+}
+
+.arrow {
+  position: absolute;
+  background-color: black;
+  width: 60px;
+  aspect-ratio: 1/1;
+  opacity: 0.3;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.arrow__left {
+  left: 0;
+  top: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
+
+.arrow__right {
+  right: 0;
+  z-index: 100;
+  top: 50%;
+  transform: translate(50%, -50%);
 }
